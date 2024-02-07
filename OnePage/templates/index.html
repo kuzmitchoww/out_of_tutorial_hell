@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+
+  <body class="d-flex h-100 text-center text-bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Welcome!</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link fw-bold px-3 active " aria-current="page" href="{{ url_for('home') }}">About Me</a>
+            <a class="nav-link fw-bold px-3" href="{{ url_for('portfolio') }}">Portfolio</a>
+            <a class="nav-link fw-bold px-3" href="{{ url_for('pricing') }}">Pricing</a>
+            <a class="nav-link fw-bold px-3" href="{{ url_for('contact') }}">Contact</a>
+          </nav>
+        </div>
+      </header>
+  {% block body %}
+  <main class="px-3">
+    <h1>Lorem Ipsum</h1>
+    <p class="lead"><q>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</q></p>
+    <p class="lead"><q><small>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</small></q></p>
+  </main>
+  {% endblock %}
+
+  <footer class="mt-auto text-white-50">
+    <p>One Page for <a href="https://www.udemy.com/course/100-days-of-code/" class="text-white">Udemy</a>, by <a href="https://twitter.com/kuziaka_btc" class="text-white">@kuzmitchoww</a>.</p>
+  </footer>
+</div>
+{{ bootstrap.load_js() }}
+</body>
+</html>
